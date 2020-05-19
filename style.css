@@ -1,0 +1,128 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.player-panel {
+    display: flex;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.player-panel div {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+.player-panel img {
+    width: 60px;
+    height: 60px;
+    margin-right: 16px;
+}
+
+.player-inactive {
+    opacity: 0.5;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    width: 399px;
+}
+
+td {
+    position: relative;
+    width: 133px;
+    height: 133px;
+    border: 5px solid black;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: rgba(25, 221, 0, 0.1);
+}
+
+tr:first-child td {
+    border-top: 0;
+}
+
+tr td:first-child {
+    border-left: 0;
+}
+
+table tr:last-child td {
+    border-bottom: 0;
+}
+
+table tr td:last-child {
+    border-right: 0;
+}
+
+.shape {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 26px;
+    top: 26px;
+}
+
+.d-none {
+    display: none;
+}
+
+.horizontal-line {
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 350px;
+    position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+    z-index: 1;
+}
+
+.make-vertical {
+    transform: rotate(90deg) scaleX(0.0);
+}
+
+.game-over {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+    animation: zoomIn 225ms ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.restart-btn {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: #1C0B7F;
+    z-index: 2;
+    width: 300px;
+    height: 100px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 60px;
+}
+
+.restart-btn:hover {
+    background-color: rgb(59, 40, 168);
+}
